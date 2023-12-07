@@ -1,15 +1,44 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-google-pprof
+Section: golang
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Stephen Gelman <ssgelm@debian.org>,
+           Anthony Fok <foka@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-chzyer-readline-dev,
+               golang-github-ianlancetaylor-demangle-dev
+Standards-Version: 4.6.0
+Homepage: https://github.com/google/pprof
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-google-pprof
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-google-pprof.git
+XS-Go-Import-Path: github.com/google/pprof
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-google-pprof-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         golang-github-chzyer-readline-dev,
+         golang-github-ianlancetaylor-demangle-dev,
+Description: pprof is a tool for visualization and analysis of profiling data
+ pprof reads a collection of profiling samples in profile.proto format
+ and generates reports to visualize and help analyze the data. It can
+ generate both text and graphical reports (through the use of the dot
+ visualization package).
+ .
+ profile.proto is a protocol buffer that describes a set of callstacks
+ and symbolization information. A common usage is to represent a set of
+ sampled callstacks from statistical profiling. The format is described
+ on the proto/profile.proto (./proto/profile.proto) file. For details on
+ protocol buffers, see https://developers.google.com/protocol-buffers
+ .
+ Profiles can be read from a local file, or over http. Multiple profiles
+ of the same type can be aggregated or compared.
+ .
+ If the profile samples contain machine addresses, pprof can symbolize
+ them through the use of the native binutils tools (addr2line and nm).
+ .
+ This is not an official Google product.

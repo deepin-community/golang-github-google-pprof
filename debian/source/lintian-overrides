@@ -1,0 +1,5 @@
+# testdata
+source-is-missing internal/binutils/testdata/*
+source-is-missing internal/report/testdata/*
+source-contains-prebuilt-binary internal/binutils/testdata/*
+source-contains-prebuilt-binary internal/report/testdata/*

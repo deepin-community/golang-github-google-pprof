@@ -1,0 +1,11 @@
+# testdata
+arch-dependent-file-in-usr-share usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
+arch-dependent-file-in-usr-share usr/share/gocode/src/github.com/google/pprof/internal/report/testdata/*
+arch-independent-package-contains-binary-or-object usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
+arch-independent-package-contains-binary-or-object usr/share/gocode/src/github.com/google/pprof/internal/report/testdata/*
+missing-dependency-on-libc needed by usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
+shell-script-fails-syntax-check usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
+unstripped-binary-or-object usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
+unstripped-binary-or-object usr/share/gocode/src/github.com/google/pprof/internal/report/testdata/*
+apparently-corrupted-elf-binary usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
+executable-not-elf-or-script usr/share/gocode/src/github.com/google/pprof/internal/binutils/testdata/*
